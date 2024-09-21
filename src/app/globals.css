@@ -4,12 +4,12 @@
 
 :root {
   --background: #ffffff;
-  --foreground: #171717;
+  --foreground: #2d2d2d;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
+    --background: #272729;
     --foreground: #ededed;
   }
 }
@@ -24,4 +24,29 @@ body {
   .text-balance {
     text-wrap: balance;
   }
+
+  .bg-gradient {
+    background: rgb(142, 36, 255);
+    background: linear-gradient(
+      3deg,
+      rgba(142, 36, 255, 1) 0%,
+      rgba(142, 36, 255, 0.8178921226693803) 33%,
+      rgba(142, 36, 255, 0.5769957641259629) 100%
+    );
+  }
+}
+
+.game-card__box {
+  transition: opacity 0.2s ease-in-out, filter 0.2s ease-in-out;
+}
+
+.game-card__container:hover > :not(:hover) {
+  opacity: 0.5;
+  filter: blur(2px);
+}
+
+.swiper-slide {
+  width: 37rem;
+  height: 20rem;
+  position: relative;
 }
