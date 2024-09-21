@@ -14,7 +14,7 @@ export default function Channel({ params }: Props) {
       <div className="grow w-full flex flex-col gap-4">
         {/* gameplay*/}
         <iframe
-          src={`https://player.twitch.tv/?channel=${params.channel}&parent=localhost`}
+          src={`https://player.twitch.tv/?channel=${params.channel}&parent=${process.env.NEXT_PUBLIC_TWITCH_PARENT}`}
           height="480"
           width="100%"
           allowFullScreen={true}
